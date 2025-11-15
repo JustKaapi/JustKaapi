@@ -1,0 +1,242 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-nav li {
+    padding: 0.5em 1em;
+    display: block;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.main-nav a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.main-nav a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.section-title {
+    font-size: xx-large;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: block;
+}
+
+.product {
+    min-width: 150px;
+    border: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product:hover .prd-title {
+    text-decoration: underline;
+}
+
+.product:hover img {
+    transition: all 0.3s ease-in-out 0s;
+    transform: scale(1.03);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product span {
+    display: block;
+}
+
+.prd-title {
+    font-size: large;
+    margin: 10px 0px;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+
+.prd-description {
+    color: black;
+    opacity: 0.62;
+    margin: 10px 0px;
+}
+
+.prd-price {
+    font-size: large;
+}
+
+.prd-buy {
+    width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer>* {
+    margin: 20px 10px;
+}
+
+.product-container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.for-large {
+    visibility: collapse;
+}
+
+
+@media (min-width: 450px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .for-large {
+        visibility: collapse;
+    }
+}
+
+@media (min-width: 750px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .for-large {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 980px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .for-large {
+        visibility: visible;
+    }
+}
+
+.hover-icon {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 5px;
+    padding: 3px;
+    overflow: hidden;
+    background-color: transparent;
+    align-self: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.hover-icon-badge {
+    width: 12px;
+    height: 12px;
+    top: 0px;
+    left: -22px;
+    position: relative;
+    background: red;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+.hover-icon:hover {
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+dialog {
+    width: 80%;
+    max-width: 700px;
+    height: 80vh;
+    max-height: 400px;
+    border: 0px transparent;
+    outline: none;
+    border-radius: 6px;
+}
+
+dialog:focus-within {
+    outline: none;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary {
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-secondary {
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+
+.ripple-button:active {
+    transform: scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.active-tab {
+    background-color: #3699FF !important;
+    color: white !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    background-color: lightgrey;
+    transition: all ease-in 0.3s;
+}
+
+.line-height-150 {
+    line-height: 1.5;
+}

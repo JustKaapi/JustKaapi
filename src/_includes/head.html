@@ -1,0 +1,24 @@
+<head>
+    <title> {{ meta.title }} </title>
+    <link rel="icon" type="image/x-icon" href="{{ meta.favicon }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    {% if meta.og != null %}
+    {% include "og_meta.html" %}
+    {% endif %}
+
+    <link rel="stylesheet" href="./bundle.css">
+    <script src="./bundle.js"></script>
+    <script src="./cart.js"></script>
+
+    <script>
+        {% assign d_products = products %}
+        const G_PRODUCTS = {{ d_products | json }};
+
+        window.addEventListener("load", e => {
+            windowLoaded && windowLoaded(e);
+        });
+
+    </script>
+
+</head>

@@ -1,0 +1,9 @@
+{% for product in products %}
+<div class="product">
+    <img src="{{ product.image }}">
+    <span class="prd-title"> {{ product.title }} </span>
+    <span class="prd-description">{{ product.description }}</span>
+    <span class="prd-price">₹ {{ product.price }}</span>
+    <button class="prd-buy" type="button" data-id="{{ product.id }}" click="addToCart(event, this)"> Add to Cart </button>
+</div>
+{% endfor %}

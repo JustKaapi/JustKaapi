@@ -1,0 +1,38 @@
+---
+title: Just Kaapi
+layout: index.html
+---
+
+<div style="display: flex; justify-content: center; background: #ffd10b;">
+    <picture>
+        <source media="(max-width: 450px)" srcset="./assets/banner/bg-s.webp" />
+        <source media="(max-width: 750px)" srcset="./assets/banner/bg-m.webp" />
+        <img style="max-width: 100%; height: auto;" src="./assets/banner/bg-l.webp">
+    </picture>
+</div>
+
+<div style="margin: auto; max-width: 1000px; padding: 10px;">
+    <div id="Coffee">
+        <span class="section-title">Coffee</span>
+        <div class="product-container" style="width: 100%;">
+
+            {% for product in products %}
+            <div class="product">
+                <div>
+                    <img src="./assets/products/soap-1.png">
+                    <span class="prd-title" title="{{ product.title }}"> {{ product.title }} </span>
+                    <span class="prd-description" title="{{ product.description }}">{{ product.description }}</span>
+
+                </div>
+                <div>
+                    <span class="prd-price">₹ {{ product.price }}</span>
+                    <button class="prd-buy ripple-button" type="button" data-id="{{ product.id }}" onclick="addToCart(event, this)">
+                        Add to Cart </button>
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

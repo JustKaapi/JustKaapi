@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+{% include "head.html" %}
+
+<body>
+
+    {% include "cart_dialog.html" %}
+
+    <div style="margin: 0px; position: sticky; top: 0px; background: white; padding: 15px 10px; z-index: 100;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; ">
+            <div style="display: flex; gap: 10px">
+                <img style="width: 30px; height: 30px; margin: auto" src="./assets/site/favicon.png">
+                <span style="font-size: x-large; margin: auto; opacity: 0.8;">Just Kaapi</span>
+            </div>
+            <div style="display: flex; gap: 10px">
+                <img class="hover-icon" style="width: 20px; height: auto; object-fit: contain; margin-right: 10px;"
+                    src="./assets/site/bell.png">
+                <img class="hover-icon" style="width: 20px; height: auto; object-fit: contain"
+                    src="./assets/site/cart.png" onclick="showCart()">
+                <span id="cart-items-badge" class="hover-icon-badge hidden" onclick="showCart()"></span>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+
+        {% if meta.nav != null %}
+        {% include "nav.html" %}
+        {% endif %}
+    </div>
+
+    {{ content }}
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "justkaapi",
+  "version": "1.0.0",
+  "description": "[https://justkaapi.github.io](https://justkaapi.github.io)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy --serve --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vallarasu Sambathkumar",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "html-minifier-terser": "^7.2.0"
+  }
+}

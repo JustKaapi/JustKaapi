@@ -1,0 +1,9 @@
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    {% for i in meta.social %}
+        {% if i.visible %}
+        <a href="{{  i.href }}" target="_blank">
+            <img class="hover-icon" src="{{  i.image }}" style="width: 22px; height: 22px;">
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>

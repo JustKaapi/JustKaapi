@@ -1,0 +1,47 @@
+<div style="margin: 0px 20px; display: flex; justify-content: flex-end;">
+    {% include "social.html" %}
+</div>
+
+<div class="footer" style="background-color: #1b1a1a; color: white; padding: 20px; margin: 0px; margin-top: 30px;">
+
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly; gap: 20px;">
+
+        <div style="width: 100%;">
+
+            <div>
+                <h3>{{ meta.about.title }}</h3>
+                <span style="line-height: 20px;"> {{ meta.about.description }} </span>
+            </div>
+
+            <div>
+                <h3>{{ meta.shipping.title }}</h3>
+                <span style="line-height: 20px;"> {{ meta.shipping.description }} </span>
+            </div>
+        </div>
+
+        <div style="width: 100%;">
+        </div>
+
+        <div style="width: 100%;">
+            <h4>Contact</h4>
+
+            <span>Need help? Write to us:</span>
+            <br>
+
+            {% if meta.contact.mailto %}
+            <a style="color: white; margin: 10px 0px; display: block;" href="mailto:{{meta.contact.mailto}}"> {{
+                meta.contact.mailto }} </a>
+            {% endif %}
+
+            {% if meta.contact.whatsapp %}
+            <a style="color: white; margin: 10px 0px; display: block;" href="{{meta.contact.whatsapp}}">WhatsApp</a>
+            {% endif %}
+
+            <div style="margin: 0px;">
+                {% include "social.html" %}
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<nav>
+    <ul class="main-nav" style="list-style: none; margin: 0; padding: 0; display: flex;">
+        {% for i in meta.nav %}
+        <li><a href="{{ i.href }}"> {{ i.title }} </a></li>
+        {% endfor %}
+    </ul>
+</nav>
